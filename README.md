@@ -8,10 +8,9 @@ LLM-assisted development.
 
 ## What's Inside
 
-- **Context Auditor** - Automated linting for AI config files (CLAUDE.md, .cursorrules)
-  based on research papers
+- **Skills** - Skills developed from research-backed information
 - **Prompt Patterns** - Production-tested system prompts and templates
-- **Engineering Tools** - Scripts, skills, and utilities for AI-assisted workflows
+- **Engineering Tools** - Scripts and utilities for AI-assisted workflows
 
 ## The Philosophy
 
