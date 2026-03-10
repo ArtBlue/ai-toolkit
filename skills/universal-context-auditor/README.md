@@ -1,4 +1,4 @@
-# Generic Context Auditor
+# Universal Context Auditor
 
 A research-backed skill for auditing AI configuration files.
 
@@ -390,7 +390,7 @@ jobs:
 
 ```bibtex
 @software{generic_context_auditor,
-  title = {Generic Context Auditor: Research-Backed AI Configuration Auditor},
+  title = {Universal Context Auditor: Research-Backed AI Configuration Auditor},
   author = {Khachatryan, Arthur},
   year = {2025},
   url = {https://github.com/[your-repo]/generic-context-auditor},
