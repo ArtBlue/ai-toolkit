@@ -15,10 +15,10 @@ Optimizes your CLAUDE\.md, .cursorrules, or any AI instruction files for maximum
 mkdir -p .claude/skills
 
 # Copy the skill
-cp -r /path/to/generic-context-auditor .claude/skills/
+cp -r /path/to/universal-context-auditor .claude/skills/
 
 # Or download from GitHub
-curl -L https://github.com/[your-repo]/generic-context-auditor/archive/main.tar.gz | \
+curl -L https://github.com/[your-repo]/universal-context-auditor/archive/main.tar.gz | \
   tar xz -C .claude/skills/
 ```
 
@@ -26,10 +26,10 @@ curl -L https://github.com/[your-repo]/generic-context-auditor/archive/main.tar.
 
 ```bash
 # Clone to a shared location
-git clone https://github.com/[your-repo]/generic-context-auditor ~/tools/
+git clone https://github.com/[your-repo]/universal-context-auditor ~/tools/
 
 # Symlink in each project
-ln -s ~/tools/generic-context-auditor .claude/skills/generic-context-auditor
+ln -s ~/tools/universal-context-auditor .claude/skills/universal-context-auditor
 ```
 
 **Option 3: Global Installation**
@@ -37,20 +37,20 @@ ln -s ~/tools/generic-context-auditor .claude/skills/generic-context-auditor
 ```bash
 # Install to Claude's global skills directory
 mkdir -p ~/.claude/skills
-cp -r /path/to/generic-context-auditor ~/.claude/skills/
+cp -r /path/to/universal-context-auditor ~/.claude/skills/
 ```
 
 ### Usage
 
 ```bash
 # Audit your root CLAUDE.md
-/generic-context-auditor
+/universal-context-auditor
 
 # Audit all CLAUDE.md files in your repo
-/generic-context-auditor --repo-wide
+/universal-context-auditor --repo-wide
 
 # Audit a specific file
-/generic-context-auditor --file path/to/instructions.md
+/universal-context-auditor --file path/to/instructions.md
 ```
 
 ## What You Get
@@ -294,7 +294,7 @@ Each example shows:
 For monorepos or projects with nested CLAUDE\.md files:
 
 ```bash
-/generic-context-auditor --repo-wide
+/universal-context-auditor --repo-wide
 ```
 
 **Validates:**
@@ -317,14 +317,14 @@ Total: ~1,730 tokens ✅
 ### "Skill not found"
 
 Ensure the skill is in one of these locations:
-- `.claude/skills/generic-context-auditor/`
-- `~/.claude/skills/generic-context-auditor/`
+- `.claude/skills/universal-context-auditor/`
+- `~/.claude/skills/universal-context-auditor/`
 
 ### "No CLAUDE\.md found"
 
 Specify the file explicitly:
 ```bash
-/generic-context-auditor --file .cursorrules
+/universal-context-auditor --file .cursorrules
 ```
 
 ### "Scores are low, but I think my file is good"
@@ -382,7 +382,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run Context Auditor
         run: |
-          claude-code run /generic-context-auditor --ci-mode
+          claude-code run /universal-context-auditor --ci-mode
           # Exit 1 if score < 70
 ```
 
@@ -393,7 +393,7 @@ jobs:
   title = {Universal Context Auditor: Research-Backed AI Configuration Auditor},
   author = {Khachatryan, Arthur},
   year = {2025},
-  url = {https://github.com/[your-repo]/generic-context-auditor},
+  url = {https://github.com/[your-repo]/universal-context-auditor},
   note = {Based on 25+ primary sources including Liu et al. (2024), Anthropic prompt engineering research}
 }
 ```
@@ -411,7 +411,7 @@ We welcome contributions! Areas of interest:
 
 Built on research from:
 - **Anthropic** - Prompt caching, XML tag effectiveness
-- **Stanford NLP** - "Lost in the Middle" (Liu et al., 2024)
+- **Anthropic** - "Lost in the Middle" (Liu et al., 2024)
 - **UC Berkeley** - Context window utilization patterns
 - **Microsoft Research** - Code generation fidelity
 

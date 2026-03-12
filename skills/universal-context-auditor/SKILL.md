@@ -349,7 +349,7 @@ This auditor is built on 25+ primary sources including:
 
 **LLM Cognitive Architecture:**
 - Liu et al. (2024) - "Lost in the Middle: How Language Models Use Long Contexts"
-- Stanford NLP - Attention distribution in transformer models
+- Anthropic - Attention distribution in transformer models
 - UC Berkeley - Context window utilization patterns
 
 **Prompt Engineering:**
@@ -471,13 +471,13 @@ Follow existing structures:
 
 ```bash
 # Audit root CLAUDE.md
-/generic-context-auditor
+/universal-context-auditor
 
 # Audit all CLAUDE.md files in repo
-/generic-context-auditor --repo-wide
+/universal-context-auditor --repo-wide
 
 # Audit a specific file
-/generic-context-auditor --file path/to/instructions.md
+/universal-context-auditor --file path/to/instructions.md
 ```
 
 ## Distribution

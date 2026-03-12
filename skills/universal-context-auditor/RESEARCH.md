@@ -2,7 +2,7 @@
 
 The Universal Context Auditor is built on 25 primary sources from academic research, industry whitepapers, and information gleaned from production AI systems.
 
-## Core Research Papers
+## Sources
 
 1. DeepMind. "Gemini 3." Google DeepMind, 2026. Accessed March 12, 2026. https://deepmind.google/models/evals-methodology/gemini-3-deep-think.
 
@@ -54,7 +54,19 @@ The Universal Context Auditor is built on 25 primary sources from academic resea
 
 25. Gloaguen, Thibaud, Niels Mündler, Mark Müller, Veselin Raychev, and Martin Vechev. "Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?" arXiv:2602.11988, Accessed March 12, 2026. https://arxiv.org/pdf/2602.11988
 
-26. Khachatryan, Arthur. "The $100,000 "Clean Code" Tax: Why Your Elegant AI Configs are Bleeding Capital" LinkedIn article on the summary of the research findings, Accessed March 12, 2026. https://www.linkedin.com/pulse/100000-clean-code-tax-why-your-elegant-ai-configs-arthur-khachatryan-ktvmc/ 
+26. Liu, Nelson F., Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua, Fabio Petroni, and Percy Liang. Stanford and UC Berkley. "Lost in the Middle: How Language Models Use Long Contexts." Transactions of the Association for Computational Linguistics 12 (2024): 157–173. Accessed March 12, 2026. https://doi.org/10.48550/arXiv.2307.03172 
+
+27. Anthropic. "Prompt Caching." Claude Documentation. Accessed March 12, 2026. https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching 
+
+28. Anthropic. "System Prompts." Claude Documentation. Accessed March 12, 2026. https://docs.anthropic.com/en/docs/system-prompts 
+
+29. Anthropic. "Use XML tags to structure your prompts." Accessed March 12, 2026. https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/use-xml-tags
+
+30. Anthropic. "Prompt Caching." Accessed March 12, 2026. https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching
+
+31. Anthropic Release Notes. "System Prompts." Accessed March 12, 2026. https://docs.anthropic.com/en/release-notes/system-prompts
+
+32. Khachatryan, Arthur. "The $100,000 "Clean Code" Tax: Why Your Elegant AI Configs are Bleeding Capital" LinkedIn article on the summary of the research findings, Accessed March 12, 2026. https://www.linkedin.com/pulse/100000-clean-code-tax-why-your-elegant-ai-configs-arthur-khachatryan-ktvmc/ 
 
 ## Methodology
 
@@ -72,7 +84,7 @@ This skill synthesizes findings across:
 | Prompt caching (Anthropic) | Static content, <2K threshold, cache efficiency scoring |
 | Code generation fidelity (Microsoft) | Correctness Guards for version-specific syntax |
 | Context utilization (UC Berkeley) | Discovery-first architecture, signal-to-noise |
-| WET principle (Khachatryan) | Fidelity > DRY scoring |
+| WET principle (from implications) | Fidelity > DRY scoring |
 | Instruction following (DeepMind) | Attention architecture layers |
 
 ## Citation
