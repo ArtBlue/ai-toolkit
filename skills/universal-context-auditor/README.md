@@ -105,7 +105,7 @@ The skill examines your current configuration without assuming anything about yo
 
 ### 2. Evaluates Structure Against Research
 
-Based on 28 primary sources including:
+Based on 25+ primary sources including:
 - Liu et al. (2024) - "Lost in the Middle" (Primacy Effect)
 - Anthropic - Prompt caching optimization
 - Stanford/UC Berkeley - LLM attention patterns
@@ -394,7 +394,7 @@ jobs:
   author = {Khachatryan, Arthur},
   year = {2025},
   url = {https://github.com/[your-repo]/generic-context-auditor},
-  note = {Based on 28 primary sources including Liu et al. (2024), Anthropic prompt engineering research}
+  note = {Based on 25+ primary sources including Liu et al. (2024), Anthropic prompt engineering research}
 }
 ```
 
@@ -402,13 +402,10 @@ jobs:
 
 We welcome contributions! Areas of interest:
 
-- **New language/framework examples** (Julia, Elixir, Zig, etc.)
-- **Research citations** (new LLM cognitive studies)
-- **CI/CD integrations** (GitLab, CircleCI, etc.)
+- **New real-world language/framework examples** (Julia, Elixir, Zig, etc.)
+- **Research citations** (new LLM studies)
 - **VSCode extension** (real-time linting)
 - **Scoring improvements** (better heuristics)
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Acknowledgments
 

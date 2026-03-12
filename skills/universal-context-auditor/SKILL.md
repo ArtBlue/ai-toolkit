@@ -1,6 +1,6 @@
 ---
 name: universal-context-auditor
-description: Universal AI config context auditor (CLAUDE.md, .cursorrules, etc.) based on 28 primary sources. Optimizes fidelity × cache efficiency for any tech stack. No setup required - works with your existing files.
+description: Universal AI config context auditor (CLAUDE.md, .cursorrules, etc.) based on 25+ primary sources. Optimizes fidelity × cache efficiency for any tech stack. No setup required - works with your existing files.
 ---
 
 # Universal Context Auditor
@@ -345,7 +345,7 @@ Additional checks:
 
 ## Research Foundation
 
-This auditor is built on 28 primary sources including:
+This auditor is built on 25+ primary sources including:
 
 **LLM Cognitive Architecture:**
 - Liu et al. (2024) - "Lost in the Middle: How Language Models Use Long Contexts"
