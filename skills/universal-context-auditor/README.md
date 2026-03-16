@@ -8,39 +8,22 @@ Optimizes your CLAUDE\.md, .cursorrules, or any AI instruction files for maximum
 
 ### Installation
 
-**Option 1: Copy to Your Project (Recommended)**
+**Option 1: Using Skills.sh (Recommended)**
+```bash
+npx skills add ArtBlue/AI-toolkit/skills
+```
+
+**Option 2: Copy to Your Project**
 
 ```bash
 # Create skills directory if it doesn't exist
 mkdir -p .claude/skills
-
-# Copy the skill
-cp -r /path/to/universal-context-auditor .claude/skills/
-
-# Or download from GitHub
-curl -L https://github.com/[your-repo]/universal-context-auditor/archive/main.tar.gz | \
+# Download from GitHub
+curl -L https://github.com/ArtBlue/AI-toolkit/archive/main.tar.gz | \
   tar xz -C .claude/skills/
 ```
 
-**Option 2: Symlink for Multi-Repo Use**
-
-```bash
-# Clone to a shared location
-git clone https://github.com/[your-repo]/universal-context-auditor ~/tools/
-
-# Symlink in each project
-ln -s ~/tools/universal-context-auditor .claude/skills/universal-context-auditor
-```
-
-**Option 3: Global Installation**
-
-```bash
-# Install to Claude's global skills directory
-mkdir -p ~/.claude/skills
-cp -r /path/to/universal-context-auditor ~/.claude/skills/
-```
-
-### Usage
+### Usage (explicit)
 
 ```bash
 # Audit your root CLAUDE.md
@@ -51,6 +34,14 @@ cp -r /path/to/universal-context-auditor ~/.claude/skills/
 
 # Audit a specific file
 /universal-context-auditor --file path/to/instructions.md
+```
+
+### Usage (implied)
+
+Some LLMs will automatically pick up and use the skill if they infer you're trying to do what the specific skill is meant to do. For these, you should simply be able to use them using natural language by prompting something like this:
+
+```bash
+Audit the context file CLAUDE.md
 ```
 
 ## What You Get
