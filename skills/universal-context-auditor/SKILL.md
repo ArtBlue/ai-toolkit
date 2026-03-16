@@ -91,11 +91,9 @@ Core architectural constraints that must never be violated
 Version-specific syntax examples (YOUR frameworks, YOUR versions)
 </correctness_guards>
 
-<logic_gate>
-1. Assess request for safety/policy alignment
-2. Identify core objective
-3. Determine if info is already in context
-</logic_gate>
+<agent_constraints>
+Workflow boundaries: what the AI must never do and must always do before marking work complete
+</agent_constraints>
 ```
 
 **Note:** GPT and Gemini prefer Markdown hierarchy. Only use XML for Claude. Don't mix formats.

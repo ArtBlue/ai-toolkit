@@ -1,5 +1,7 @@
 # Go Microservices Example Audit
 
+> **Illustrative example.** This before/after transformation is constructed to demonstrate the auditing principles — not taken from a real project. See the [examples README](README.md) for context, or run `/universal-context-auditor` on your own config to get actual results.
+
 This example shows a typical Go microservices project CLAUDE\.md before and after audit.
 
 ## Before: Original CLAUDE\.md
@@ -60,7 +62,7 @@ docker-compose up
 ```
 ```
 
-**Token count:** ~1,100 tokens
+**Token count:** ~1,100 tokens (estimated)
 **Estimated scores:**
 - Fidelity: 38/100 (extremely generic advice)
 - Cache Efficiency: 65/100 (under 2K but file tree bloat)
@@ -450,7 +452,7 @@ go build -o bin/server cmd/server/main.go
 - `mockgen` - Interface mocking (if not using manual mocks)
 ```
 
-**Token count:** ~1,980 tokens
+**Token count:** ~1,980 tokens (estimated)
 **Projected scores:**
 - Fidelity: 90/100 (concrete patterns, anti-patterns, code examples)
 - Cache Efficiency: 88/100 (under 2K, all static)
@@ -518,6 +520,8 @@ go build -o bin/server cmd/server/main.go
    - "Small interfaces at usage site" prevents this explicitly
 
 ## Real-World Impact
+
+*These figures are illustrative estimates of the types of improvements this audit typically surfaces — not measurements from a specific project.*
 
 **Before audit:**
 - AI used `==` for error comparison in 78% of code (breaks with wrapped errors)

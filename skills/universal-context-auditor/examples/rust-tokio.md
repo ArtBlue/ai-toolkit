@@ -1,5 +1,7 @@
 # Rust/Tokio Example Audit
 
+> **Illustrative example.** This before/after transformation is constructed to demonstrate the auditing principles — not taken from a real project. See the [examples README](README.md) for context, or run `/universal-context-auditor` on your own config to get actual results.
+
 This example shows a typical async Rust project CLAUDE\.md before and after audit.
 
 ## Before: Original CLAUDE\.md
@@ -49,7 +51,7 @@ cargo run
 cargo test
 ```
 
-**Token count:** ~950 tokens
+**Token count:** ~950 tokens (estimated)
 **Estimated scores:**
 - Fidelity: 35/100 (extremely vague, no specifics)
 - Cache Efficiency: 60/100 (under 2K but wasteful structure)
@@ -565,7 +567,7 @@ cargo sqlx prepare              # Cache query metadata for CI
 - `cargo-nextest` - Faster test runner (optional)
 ```
 
-**Token count:** ~1,995 tokens
+**Token count:** ~1,995 tokens (estimated)
 **Projected scores:**
 - Fidelity: 94/100 (exhaustive async patterns, ownership clarity)
 - Cache Efficiency: 90/100 (just under 2K, all static)
@@ -634,6 +636,8 @@ cargo sqlx prepare              # Cache query metadata for CI
    - Huge safety benefit when used correctly
 
 ## Real-World Impact
+
+*These figures are illustrative estimates of the types of improvements this audit typically surfaces — not measurements from a specific project.*
 
 **Before audit:**
 - AI used blocking I/O in async handlers in 45% of code (killed throughput)

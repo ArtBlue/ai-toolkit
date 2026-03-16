@@ -1,5 +1,7 @@
 # Python/Django Example Audit
 
+> **Illustrative example.** This before/after transformation is constructed to demonstrate the auditing principles — not taken from a real project. See the [examples README](README.md) for context, or run `/universal-context-auditor` on your own config to get actual results.
+
 This example shows a typical Django project CLAUDE\.md before and after audit.
 
 ## Before: Original CLAUDE\.md
@@ -63,7 +65,7 @@ python manage.py test
 ```
 ```
 
-**Token count:** ~1,450 tokens
+**Token count:** ~1,450 tokens (estimated)
 **Estimated scores:**
 - Fidelity: 48/100 (vague commands, critical syntax buried)
 - Cache Efficiency: 75/100 (under 2K, but has discoverable content)
@@ -132,10 +134,6 @@ Celery for async tasks (broker: Redis)
 - `views.py` - ViewSets with permission_classes, filterset_class
 - `tests.py` - pytest-django fixtures + APIClient tests
 
-**Non-obvious conventions:**
-- All viewsets inherit from `BaseAuthenticatedViewSet` (adds org filtering)
-- Serializers use `SerializerMethodField` for computed properties, not model properties
-- Custom exceptions in `core.exceptions` (not DRF defaults)
 
 ## Testing Requirements
 
@@ -192,7 +190,7 @@ python manage.py makemigrations --check --dry-run
 ```
 ```
 
-**Token count:** ~1,680 tokens
+**Token count:** ~1,680 tokens (estimated)
 **Projected scores:**
 - Fidelity: 88/100 (XML guards, specific examples)
 - Cache Efficiency: 80/100 (under 2K, minimal dynamic content)
@@ -248,6 +246,8 @@ python manage.py makemigrations --check --dry-run
 4. **Correctness Guards prevent hallucination** - AI won't revert to Django 3.x or Python 3.8 patterns from training data
 
 ## Real-World Impact
+
+*These figures are illustrative estimates of the types of improvements this audit typically surfaces — not measurements from a specific project.*
 
 **Before audit:**
 - AI suggested `url()` in 23% of routing changes (deprecated in Django 4.0)
