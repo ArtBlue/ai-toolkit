@@ -156,7 +156,7 @@ Key principles:
 
 - Verbose, redundant configs are GOOD if fully cached
 - "Write Everything Twice" (WET) prevents attention decay
-- 5,000-token config at 90% cache rate > 1,100-token "clean" config
+- A well-cached 2,000-token config > a compressed 800-token "clean" config
 - If clean code habits make AI dumber, they're technical debt
 
 ### 6. **Discovery-First Architecture**
@@ -244,7 +244,7 @@ Provide:
 - **Individual scores** for each file
 - **Aggregate recommendations**
 
-### 3. Identify Issues (Single-File)
+### Identify Issues — Single-File
 
 **Anti-Patterns to Flag:**
 
@@ -272,7 +272,7 @@ Provide:
 - Examples from the actual project tech stack
 - Token efficiency through discovery-first approach
 
-### 3. Identify Issues (Repo-Wide)
+### Identify Issues — Repo-Wide (Additional)
 
 **Additional Anti-Patterns for Multi-File:**
 
@@ -290,7 +290,7 @@ Provide:
 - **Targeted redundancy**: Critical rules repeated where needed (WET)
 - **Combined total <2,000 tokens**: Maintains cache efficiency
 
-### 4. Propose Refactored Version
+### Propose Refactored Version
 
 **Single-File Structure:**
 
@@ -362,7 +362,6 @@ This auditor is built on 25+ primary sources including:
 - Google DeepMind - Agent reliability patterns
 - Clean Code Tax principle (Khachatryan, 2025)
 
-Full citation list available in the research documentation.
 
 ## Customization (Optional)
 
@@ -429,15 +428,12 @@ We use React 19 and TypeScript 5.5.
 ```markdown
 <architecture_rules>
 React 19 + TypeScript 5.5 component library
-CSS-in-JS via styled-components
-Strict ESM-only build target
 </architecture_rules>
 
 <correctness_guards>
 **Version-Specific Syntax (Prevents Training Data Hallucination):**
 - **React 19:** Use native `ref` prop NOT `React.forwardRef` wrapper
 - **TypeScript 5.5:** Use `satisfies` operator NOT type assertions
-- **ESM imports:** Use `.js` extensions in imports (required for ESM)
 </correctness_guards>
 
 ## Component Patterns
@@ -446,6 +442,11 @@ Follow existing structures:
 - Button component: `src/components/Button/` (ref forwarding, variants)
 - Form inputs: `src/components/Input/` (validation, accessibility)
 - Custom hooks: `src/hooks/` (TypeScript generics, return type inference)
+
+## Error Handling
+
+- Use error boundaries for all async data-fetching components
+- Return `Result<T, E>` types for fallible operations — do NOT swallow errors with empty catch blocks
 
 ## Testing Requirements
 
@@ -460,12 +461,12 @@ Follow existing structures:
 **Improvements:**
 - ✅ XML encapsulation for critical rules
 - ✅ Version-specific syntax in Correctness Guards (primacy zone)
-- ✅ Removed discoverable file tree (saves ~150 tokens)
+- ✅ Removed discoverable file tree (reduces noise)
 - ✅ Replaced vague "be thorough" with specific requirements
 - ✅ Added concrete examples with file references
 - ✅ Moved from generic to specific ("modern patterns" → actual syntax)
 
-**Token count:** ~400 → ~380 tokens (more efficient + higher fidelity)
+**Token count:** ~70 → ~236 tokens (intentionally larger — the "after" adds fidelity, not compression; see Core Principle)
 
 ## Usage
 
